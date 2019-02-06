@@ -23,43 +23,48 @@ architecture test_bench of unite_traitement_tb is
   traitement_unity: entity work.unite_traitement(RTL) port map (Clk => Clk_i, WE => WE_i , RW => RW_i , RA => RA_i, RB => RB_i, W => W_i, OP => OP_i, N => N_i , S => S_i); 
     
   clock: process begin
-  Clk_i <= '0';
-  wait for 5 ns;
-  Clk_i <= '1';
-  wait for 5 ns;
+    Clk_i <= '0';
+    wait for 5 ns;
+    Clk_i <= '1';
+    wait for 5 ns;
   end process clock;
   
   test: process begin
   
     -- initialisation
-    WE_i <= '0';
+    WE_i <= '0'; 
     RW_i <= (others => '0');
     RA_i <= (others => '0');
     RB_i <= (others => '0');
     W_i  <= (others => '0');
     OP_i <= (others => '0');
+    wait for 100 ns;
+
+
+    W_i <= (others => '0'); W_i(0) <= '1'; -- la donnee a ecrire est "...001"
+    RW_i <= "0001";                        -- on positionne le curseur d'ecriture sur tab(1) 
+    RA_i <= "0001";                        -- ce sera le registre ra 
+    wait for 1 ns;
     
+    WE_i <= '1';   -- on autorise l'ecriture 
+    wait until clk_i = '1';
+    WE_i <= '0';   -- on stoppe l'ecriture    
+      
+    wait for 20 ns;
+    
+    -- ecriture sur tab(2)
+    W_i <= (others => '0'); W_i(1) <= '1'; -- la donnee a ecrire est "...010"  
+    RW_i <= "0010";                        -- on positionne le curseur d'ecriture sur tab(1) 
+    RB_i <= "0010"; -- rb = 2
     wait for 100 ns;
     
-    -- ecriture sur tab(0) et tab(1)
-    WE_i <= '1';
-    
-    W_i <= (others => '0');
-    W_i(0) <= '1';    
-    RW_i <= "0000";  
-    wait for Clk_i'Event;
-    
-    W_i <= (others => '0');
-    W_i(1) <= '1'; 
-    RW_i <= "0001";
-    wait for Clk_i'Event;
+    if signed(S_i) /= 4 then
+      OK <= FALSE;
+    end if;
     
     wait;
     
-  end process; 
-    
-    
-  
+  end process;   
 end architecture; 
 
   

@@ -22,6 +22,7 @@ Architecture RTL of unite_traitement is
   signal busW : std_logic_vector (31 downto 0);
 
 begin
+  S <= busW;
   
   banc_registre: entity work.register_bench(RTL) port map ( Clk => Clk, W => busW, WE => WE, RW => RW, RA => RA, RB => RB, A => busA, B => busB);
   UAL : entity work.ALU(RTL) port map (A => busA, B => busB, OP => OP, S => busW, N => N);
