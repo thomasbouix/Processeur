@@ -32,40 +32,38 @@ architecture test_bench of unite_traitement_tb is
   test: process begin
   
     -- initialisation
-    WE_i <= '0'; 
+    WE_i <= '1'; 
     RW_i <= (others => '0');
     RA_i <= (others => '0');
     RB_i <= (others => '0');
     W_i  <= (others => '0');
     OP_i <= (others => '0');
-    wait for 100 ns;
+    wait for 2 ns;
+    OP <= "11";
+    RA_i <= "1111";                        -- positionnement ra 
+    RB_i <= "0001";                        -- positionnement rb
 
-
-    W_i <= (others => '0'); W_i(0) <= '1'; -- la donnee a ecrire est "...001"
+    --W_i <= (others => '0'); W_i(0) <= '1'; -- la donnee a ecrire est "...001"
     RW_i <= "0001";                        -- on positionne le curseur d'ecriture sur tab(1) 
-    RA_i <= "0001";                        -- ce sera le registre ra 
-    wait for 1 ns;
     
-    WE_i <= '1';   -- on autorise l'ecriture 
-    wait until clk_i = '1';
-    WE_i <= '0';   -- on stoppe l'ecriture    
-      
-    wait for 20 ns;
+    wait for 10 ns;
+    OP <= "00";
+    wait for 10 ns;
     
     -- ecriture sur tab(2)
-    W_i <= (others => '0'); W_i(1) <= '1'; -- la donnee a ecrire est "...010"  
+    
     RW_i <= "0010";                        -- on positionne le curseur d'ecriture sur tab(2) 
-    RB_i <= "0010";                        -- ce sera le registre rb
-    wait for 1 ns;
+    wait for 5 ns;
     
     WE_i <= '1';
-    wait until clk_i = '1';
+    wait for 5 ns;
     WE_i <= '0';
     
-    if signed(S_i) /= 4 then
+    if signed(S_i) /= 3 then
       OK <= FALSE;
     end if;
     
+    report "fin du test, assurez vous que OK = TRUE";
     wait;
     
   end process;   

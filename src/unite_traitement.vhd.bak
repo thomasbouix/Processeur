@@ -7,6 +7,7 @@ Entity unite_traitement is port(
 
   Clk, WE     : in std_logic;
   RW, RA, RB  : in std_logic_vector (3 downto 0);
+  W  : in std_logic_vector (31 downto 0);
   OP : in std_logic_vector (1 downto 0);
   
   N  : out std_logic;
