@@ -27,4 +27,4 @@ begin
   banc_registre: entity work.register_bench(RTL) port map ( Clk => Clk, W => busW, WE => WE, RW => RW, RA => RA, RB => RB, A => busA, B => busB);
   UAL : entity work.ALU(RTL) port map (A => busA, B => busB, OP => OP, S => busW, N => N);
 
-end architecture RTL of unite_traitement;
+end architecture RTL;
