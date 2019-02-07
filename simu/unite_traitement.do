@@ -7,6 +7,7 @@ vsim -novopt unite_traitement_tb
 
 view signals
 add wave  -radix unsigned *
-add wave  sim:/unite_traitement_tb/traitement_unity/banc_registre/Banc
+add wave  -radix unsigned sim:/unite_traitement_tb/traitement_unity/banc_registre/Banc
+
 
 run 200 ns
