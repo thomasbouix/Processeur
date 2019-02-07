@@ -1,0 +1,27 @@
+do data_memory.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity data_memory
+# -- Compiling architecture RTL of data_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_data_memory
+# -- Compiling architecture test of tb_data_memory
+# -- Loading entity data_memory
+# vsim -novopt tb_data_memory 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_data_memory(test)
+# Loading work.data_memory(rtl)
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: fin du test, assurez qu'il n'y ait pas d'erreurs
+#    Time: 4 ns  Iteration: 0  Instance: /tb_data_memory

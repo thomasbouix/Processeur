@@ -22,9 +22,9 @@ architecture test_bench of unite_traitement_tb is
   traitement_unity: entity work.unite_traitement(RTL) port map (Clk => Clk_i, WE => WE_i , RW => RW_i , RA => RA_i, RB => RB_i, OP => OP_i, N => N_i , S => S_i); 
     
   clock: process begin
-    Clk_i <= '1';
-    wait for 5 ns;
     Clk_i <= '0';
+    wait for 5 ns;
+    Clk_i <= '1';
     wait for 5 ns;
   end process clock;
   

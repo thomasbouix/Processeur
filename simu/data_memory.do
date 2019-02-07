@@ -6,6 +6,7 @@ vcom -93 tb_data_memory.vhd
 vsim -novopt tb_data_memory
 
 view signals
-add wave *
+add wave -radix signed *
+add wave -radix signed sim:/tb_data_memory/data_memory_0/Banc
 
 run -all
