@@ -57,7 +57,7 @@ begin
                                                           S   => busW);                                                       
                                                            
   UAL           : entity work.ALU            port map (A  => busA,
-                                                       B  => busB,
+                                                       B  => mux_21_out,
                                                        OP => OP,
                                                        S  => ALU_out,
                                                        N  => N);

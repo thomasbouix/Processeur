@@ -28,7 +28,7 @@ Architecture RTL of unite_traitement_finale is
 
 begin
   
-  S <= busW;  -- technique aziz
+  S <= busW;  
   
   register_bank : entity work.register_bench port map (CLK=> Clk,
                                                        W  => busW,
