@@ -1,0 +1,11 @@
+vlib work
+
+vcom -93 ../src/gestion_instructions.vhd
+vcom -93 tb_gestion_instructions.vhd
+
+vsim -novopt tb_gestion_instructions
+
+view signals 
+add wave *
+
+run 200 ns;

@@ -23,15 +23,15 @@ Architecture RTL of gestion_instructions is
   
 begin
   
-  extender : entity work.extension_de_signe(RTL) generic map(N => 24)
+  extender : entity work.extension_de_signe(RTL) generic map(N => 32)
                                                  port map   (E => offset,
-                                                            S => extender_out);
+                                                             S => extender_out);
                                                               
   
-  multiplexeur : entity work.mux_PC(RTL) port map (nPCsel => nPCsel,
+  multiplexeur : entity work.mux_PC(RTL) port map (nPCsel     => nPCsel,
                                                    adresse_in => bus_adresse,
-                                                   offset => extender_out,
-                                                   adresse_out => mux_out);
+                                                   offset     => extender_out,
+                                                   adresse_out=> mux_out);
                                                 
   PC : entity work.PC_register(RTL) port map (clk  => clk,
                                               rst  => rst,
@@ -42,5 +42,7 @@ begin
                                                     Instruction => instruction);
                                                 
 end Architecture RTL; 
+
+
                                                                                                                  
    

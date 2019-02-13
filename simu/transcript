@@ -36,3 +36,381 @@ vcom -93 ../src/mux_PC.vhd
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux_PC
 # -- Compiling architecture RTL of mux_PC
+history
+#      1  pwd
+#      2  vcom -93 ../src/PC_register.vhd
+#      3  vcom -93 ../src/mux_PC.vhd
+#      4  history
+vcom -93 ../src/gestion_instructions.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# ** Error: ../src/gestion_instructions.vhd(31): near ";": expecting ',' or ')'
+# ** Error: ../src/gestion_instructions.vhd(36): Statement cannot be labeled.
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# ** Error: ../src/gestion_instructions.vhd(44): VHDL Compiler exiting
+# /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -93 ../src/gestion_instructions.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+vcom -93 ../src/gestion_instructions.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+ls
+# ALU.do
+# data_memory.do
+# extension_de_signe.do
+# PC_register.do
+# PC_register.do.bak
+# PC_register_tb.vhd
+# PC_register_tb.vhd.bak
+# register_bench.do
+# tb_ALU.vhd
+# tb_data_memory.vhd
+# tb_extension_de_signe.vhd
+# tb_gestion_instructions.vhd
+# tb_register_bench.vhd
+# tb_unite_traitement_finale.vhd
+# tb_unite_traitement_finale.vhd.bak
+# transcript
+# unite_traitement.do
+# unite_traitement.do.bak
+# unite_traitement_finale.do
+# unite_traitement_tb.vhd
+# unite_traitement_tb.vhd.bak
+# vsim.wlf
+# wlft65b0Er
+# wlftipj419
+# work
+dir
+# ALU.do			     tb_unite_traitement_finale.vhd
+# data_memory.do		     tb_unite_traitement_finale.vhd.bak
+# extension_de_signe.do	     transcript
+# PC_register.do		     unite_traitement.do
+# PC_register.do.bak	     unite_traitement.do.bak
+# PC_register_tb.vhd	     unite_traitement_finale.do
+# PC_register_tb.vhd.bak	     unite_traitement_tb.vhd
+# register_bench.do	     unite_traitement_tb.vhd.bak
+# tb_ALU.vhd		     vsim.wlf
+# tb_data_memory.vhd	     wlft65b0Er
+# tb_extension_de_signe.vhd    wlftipj419
+# tb_gestion_instructions.vhd  work
+# tb_register_bench.vhd
+pwd
+# /nfs/home/sasl/eleves/ei-se/3670068/Numerique/Semestre_6/Processeur/simu
+pwd
+# /nfs/home/sasl/eleves/ei-se/3670068/Numerique/Semestre_6/Processeur/simu
+ls
+# ALU.do
+# data_memory.do
+# extension_de_signe.do
+# gestion_instructions.do
+# gestion_instructions.do.bak
+# PC_register.do
+# PC_register.do.bak
+# PC_register_tb.vhd
+# PC_register_tb.vhd.bak
+# register_bench.do
+# tb_ALU.vhd
+# tb_data_memory.vhd
+# tb_extension_de_signe.vhd
+# tb_gestion_instructions.vhd
+# tb_register_bench.vhd
+# tb_unite_traitement_finale.vhd
+# tb_unite_traitement_finale.vhd.bak
+# transcript
+# unite_traitement.do
+# unite_traitement.do.bak
+# unite_traitement_finale.do
+# unite_traitement_tb.vhd
+# unite_traitement_tb.vhd.bak
+# vsim.wlf
+# wlft65b0Er
+# wlftipj419
+# work
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# ** Error: (vcom-7) Failed to open design unit file "gestion_instructions.vhd" in read mode.
+# No such file or directory. (errno = ENOENT)
+# ** Error: /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./gestion_instructions.do line 3
+# /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 gestion_instructions.vhd"
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instruction
+# ** Error: (vcom-11) Could not find work.tb_gestion_instruction.
+# ** Error: tb_gestion_instructions.vhd(9): VHDL Compiler exiting
+# ** Error: /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./gestion_instructions.do line 4
+# /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 tb_gestion_instructions.vhd"
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instructions
+# vsim -novopt tb_gestion_instructions 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_gestion_instructions(test_bench)
+# .main_pane.objects.interior.cs.body.tree
+# ** Error: (vish-4014) No objects found matching '*'.
+# Error in macro ./gestion_instructions.do line 9
+# (vish-4014) No objects found matching '*'.
+#     while executing
+# "add wave *"
+quit -sim
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instructions
+# ** Error: tb_gestion_instructions.vhd(21): Illegal target for signal assignment.
+# ** Error: tb_gestion_instructions.vhd(21): Bad target (label "clock") for signal assignment.
+# ** Error: tb_gestion_instructions.vhd(23): Illegal target for signal assignment.
+# ** Error: tb_gestion_instructions.vhd(23): Bad target (label "clock") for signal assignment.
+# ** Error: tb_gestion_instructions.vhd(32): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: tb_gestion_instructions.vhd(39): VHDL Compiler exiting
+# ** Error: /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./gestion_instructions.do line 4
+# /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 tb_gestion_instructions.vhd"
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instructions
+# ** Error: tb_gestion_instructions.vhd(32): Enumeration literal '0' is not of type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: tb_gestion_instructions.vhd(39): VHDL Compiler exiting
+# ** Error: /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./gestion_instructions.do line 4
+# /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 tb_gestion_instructions.vhd"
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instructions
+# vsim -novopt tb_gestion_instructions 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_gestion_instructions(test_bench)
+# .main_pane.objects.interior.cs.body.tree
+pwd
+# /nfs/home/sasl/eleves/ei-se/3670068/Numerique/Semestre_6/Processeur/simu
+pwd
+# /nfs/home/sasl/eleves/ei-se/3670068/Numerique/Semestre_6/Processeur/simu
+quit -sim
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instructions
+# vsim -novopt tb_gestion_instructions 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_gestion_instructions(test_bench)
+# .main_pane.objects.interior.cs.body.tree
+quit -sim
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instructions
+# -- Loading entity gestion_instructions
+# vsim -novopt tb_gestion_instructions 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_gestion_instructions(test_bench)
+# Loading work.gestion_instructions(rtl)
+# Loading work.extension_de_signe(rtl)
+# Loading work.mux_pc(rtl)
+# Loading work.pc_register(rtl)
+# Loading work.instruction_memory(rtl)
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gestion_instructions/unite_gestion_instruction/memory
+add wave -position insertpoint sim:/tb_gestion_instructions/unite_gestion_instruction/PC/*
+add wave -position insertpoint sim:/tb_gestion_instructions/unite_gestion_instruction/multiplexeur/*
+add wave -position insertpoint sim:/tb_gestion_instructions/unite_gestion_instruction/extender/*
+do gestion_instructions.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity gestion_instructions
+# -- Compiling architecture RTL of gestion_instructions
+# -- Loading entity extension_de_signe
+# -- Loading entity mux_PC
+# -- Loading entity PC_register
+# -- Loading entity instruction_memory
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_gestion_instructions
+# -- Compiling architecture test_bench of tb_gestion_instructions
+# -- Loading entity gestion_instructions
+# vsim -novopt tb_gestion_instructions 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_gestion_instructions(test_bench)
+# Loading work.gestion_instructions(rtl)
+# Loading work.extension_de_signe(rtl)
+# Loading work.mux_pc(rtl)
+# Loading work.pc_register(rtl)
+# Loading work.instruction_memory(rtl)
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_gestion_instructions/unite_gestion_instruction/memory
