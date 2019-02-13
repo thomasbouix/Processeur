@@ -1,0 +1,43 @@
+cd /nfs/home/sasl/eleves/ei-se/3671125/VHDL/processeur/Processeur/simu
+# ERROR: No extended dataflow license exists
+pwd
+# /nfs/home/sasl/eleves/ei-se/3671125/VHDL/processeur/Processeur/simu
+ls
+# ALU.do
+# data_memory.do
+# extension_de_signe.do
+# register_bench.do
+# tb_ALU.vhd
+# tb_data_memory.vhd
+# tb_extension_de_signe.vhd
+# tb_register_bench.vhd
+# tb_unite_traitement_finale.vhd
+# tb_unite_traitement_finale.vhd.bak
+# transcript
+# unite_traitement.do
+# unite_traitement.do.bak
+# unite_traitement_finale.do
+# unite_traitement_tb.vhd
+# unite_traitement_tb.vhd.bak
+# vsim.wlf
+# wlft65b0Er
+# wlftipj419
+# work
+vcom -93 ../src/instruction_memory.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instruction_memory
+# -- Compiling architecture RTL of instruction_memory
+# ** Error: ../src/instruction_memory.vhd(40): near "EOF": expecting ';'
+# /opt/altera/13.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -93 ../src/instruction_memory.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity instruction_memory
+# -- Compiling architecture RTL of instruction_memory
