@@ -24,10 +24,14 @@ begin
                                                                               instruction=> instruction);
   
   clock : process begin
-    clk <= '0';
-    wait for 5 ns;
-    clk <= '1';
-    wait for 5 ns;
+  
+    for i in 0 to 5 loop
+      clk <= '0';
+      wait for 5 ns;
+      clk <= '1';
+      wait for 5 ns;
+    end loop;
+    wait;
   end process clock;
   
   test_bench : process begin
@@ -36,8 +40,25 @@ begin
     rst <= '1';
     nPCsel <= '0';   
     offset <= (others => '0');
-    wait for 10 ns;
+    wait for 1 ns;
+    rst <= '0';
     
+    -- PC + 1
+    nPCsel <= '0';
+    wait for 10 ns;   --11 ns
+    
+    -- PC + 8 + 1 
+    nPCsel <= '1';   
+    offset <= (others => '0');
+    offset(3) <= '1'; 
+    
+    
+    -- rst
+    rst <= '1';
+    wait for 1 ns;
+    rst <= '0';
+    
+    wait for 10 ns;    
     wait;
     
   end process test_bench;

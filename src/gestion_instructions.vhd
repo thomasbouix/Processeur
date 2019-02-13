@@ -35,11 +35,11 @@ begin
                                                 
   PC : entity work.PC_register(RTL) port map (clk  => clk,
                                               rst  => rst,
-                                              Win  => extender_out,
+                                              Win  => mux_out,
                                               Wout => bus_adresse);
                                             
-  memory : entity work.instruction_memory port map (PC          => bus_adresse,
-                                                    Instruction => instruction);
+  memory : entity work.instruction_memory(RTL) port map (PC          => bus_adresse,
+                                                         Instruction => instruction);
                                                 
 end Architecture RTL; 
 

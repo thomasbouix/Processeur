@@ -18,10 +18,10 @@ Architecture RTL of mux_PC is
   process(nPCsel, adresse_in, offset) begin
   
     if (nPCsel = '0') then
-      adresse_out <= std_logic_vector (signed(adresse_in) + 1); 
+      adresse_out <= std_logic_vector (unsigned(adresse_in) + 1); 
     
     elsif (nPCsel = '1') then
-      adresse_out <= std_logic_vector (signed(adresse_in) + signed(offset));
+      adresse_out <= std_logic_vector (signed(adresse_in) + signed(offset) + 1);
     end if;
     
   end process;
