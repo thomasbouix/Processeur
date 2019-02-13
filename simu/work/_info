@@ -754,6 +754,7 @@ R60
 R61
 !s100 b?c?j_h<mN4iXeZM:YJR>2
 !i10b 1
+<<<<<<< HEAD
 Epc_register
 Z94 w1550067582
 R41
@@ -829,6 +830,82 @@ R105
 R106
 R60
 R61
+=======
+Emux_pc
+Z94 w1550066102
+R41
+R42
+R43
+R3
+Z95 8../src/mux_PC.vhd
+Z96 F../src/mux_PC.vhd
+l0
+L5
+Vg6PX7lnGFDhnH4Z`?hbL83
+!s100 CIUeN?5>V:cVA:JlheME62
+R59
+31
+!i10b 1
+Z97 !s108 1550066105.439657
+Z98 !s90 -reportprogress|300|-93|../src/mux_PC.vhd|
+Z99 !s107 ../src/mux_PC.vhd|
+R60
+R61
+Artl
+R41
+R42
+R43
+DEx4 work 6 mux_pc 0 22 g6PX7lnGFDhnH4Z`?hbL83
+l17
+L15
+VhE3_4WFGfAPEf]nB^1ZeI2
+!s100 @?S57oL_leJ=N?f0:JgHF0
+R59
+31
+!i10b 1
+R97
+R98
+R99
+R60
+R61
+Epc_register
+Z100 w1550065074
+R41
+R42
+R43
+R3
+Z101 8../src/PC_register.vhd
+Z102 F../src/PC_register.vhd
+l0
+L5
+VbSO;o;aL@45@4c^f_O7UK2
+R59
+31
+Z103 !s108 1550065077.175498
+Z104 !s90 -reportprogress|300|-93|../src/PC_register.vhd|
+Z105 !s107 ../src/PC_register.vhd|
+R60
+R61
+!s100 biPkVfHg240Nl:j?<JAHl3
+!i10b 1
+Artl
+R41
+R42
+R43
+DEx4 work 11 pc_register 0 22 bSO;o;aL@45@4c^f_O7UK2
+l18
+L14
+VVFeA1FFWm]D4E6?EU9I8D2
+R59
+31
+R103
+R104
+R105
+R60
+R61
+!s100 z@NkUc6Z7KCU>7XYN=UoD2
+!i10b 1
+>>>>>>> 8ca9273a27ded52b5a91b81b4fcfea79d2329008
 Eregister_bench
 R3
 Etb_alu
