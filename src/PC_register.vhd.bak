@@ -7,7 +7,7 @@ Entity PC_register is port(
   clk : in std_logic;
   rst : in std_logic;
   Win : in std_logic_vector (31 downto 0);
-  Wout: out std_logic_vector (31 downro 0));
+  Wout: out std_logic_vector (31 downto 0));
   
 end Entity PC_register;
 
