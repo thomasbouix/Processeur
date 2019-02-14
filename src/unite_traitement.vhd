@@ -9,7 +9,7 @@ Entity unite_traitement is port(
   RW, RA, RB  : in std_logic_vector (3 downto 0);
   OP : in std_logic_vector (1 downto 0);
   
-  N  : out std_logic;
+  N  : out std_logic_vector(31 downto 0);   -- N sur 32 bits!
   S  : out std_logic_vector (31 downto 0));
   
 end entity unite_traitement;

@@ -67,29 +67,29 @@ architecture test_bench of unite_traitement_tb is
     wait for 10 ns;
     
     -- R(3) = R(1) - R(15)
-     RA_i <= "0001";
-     RB_i <= "1111";
-     wait for 1 ns;
-     OP_i <= "10";
-     RW_i <= "0011";   -- on ecrit sur R(3)
-     wait for 1 ns;
-     if signed(S_i) /= 48 then
-       OK <= FALSE;
-     end if;
-     wait for 10 ns;
+    RA_i <= "0001";
+    RB_i <= "1111";
+    wait for 1 ns;
+    OP_i <= "10";
+    RW_i <= "0011";   -- on ecrit sur R(3)
+    wait for 1 ns;
+    if signed(S_i) /= 48 then
+      OK <= FALSE;
+    end if;
+    wait for 10 ns;
      
-     -- R(5) = R(7) - R(15)
-     RA_i <= "0111";   -- RA = R(7)
-     wait for 1 ns;
-     RW_i <= "0101";   -- on ecrit sur R(5)
-     wait for 1 ns;
-     if signed(S_i) /= -48 then
-       OK <= FALSE;
-     end if;
-     wait for 10 ns;
+    -- R(5) = R(7) - R(15)
+    RA_i <= "0111";   -- RA = R(7)
+    wait for 1 ns;
+    RW_i <= "0101";   -- on ecrit sur R(5)
+    wait for 1 ns;
+    if signed(S_i) /= -48 then
+      OK <= FALSE;
+    end if;
+    wait for 10 ns;
          
-     report "fin du test, assurez vous que OK = TRUE";
-     wait;
+    report "fin du test, assurez vous que OK = TRUE";
+    wait;
     
   end process;   
 end architecture; 

@@ -1,5 +1,7 @@
 vlib work
 
+vcom -93 ../src/data_memory.vhd
+vcom -93 ../src/multiplexeur_2.vhd
 vcom -93 ../src/unite_traitement_finale.vhd
 vcom -93 tb_unite_traitement_finale.vhd
 

@@ -1,5 +1,7 @@
 vlib work
 
+vcom -93 ../src/register_bench.vhd
+vcom -93 ../src/ALU.vhd
 vcom -93 ../src/unite_traitement.vhd
 vcom -93 unite_traitement_tb.vhd
 

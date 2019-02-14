@@ -128,9 +128,9 @@ begin
     RW <= "0101";           -- ecriture sur R(5)    
     COM_2 <= '1';           -- lecture de la memoire en sortie
     RA <= "0011";           -- R(3) contient bien 0, l'adresse de la case memoire a lire (deja le cas)
-    OP 
-     
-              
+    OP <= "11";             -- Y = RA (deja le cas)
+    wait for 10 ns;
+                 
     wait;
   end process test_bench; 
   

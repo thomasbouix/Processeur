@@ -5,6 +5,8 @@ use ieee.numeric_std.all;
 entity tb_ALU is
 end tb_ALU;
 
+-- TEST BENCH A ADAPTER POUR N SUR 32 bits !
+
 architecture test of tb_ALU is
   
   signal OP : std_logic_vector(1 downto 0);
