@@ -17,7 +17,7 @@ entity unite_controle is port(
   
   Ra          : out std_logic_vector (3 downto 0);
   Rw          : out std_logic_vector (3 downto 0);
-  Rb          : out std_logic_vector (3 downto 0)); 
+  Rb          : out std_logic_vector (3 downto 0) 
   );
 end unite_controle;
 
@@ -29,7 +29,7 @@ architecture RLT of unite_controle is
   
 begin
   
-  entity decodeur_instruction_0 : entity work.decodeur_instruction port map(instruction => instruction,
+  decodeur_instruction_0 : entity work.decodeur_instructions port map(instruction => instruction,
                                                                             flag => flag_sortie_PSR,
                                                                             nPCsel => nPCsel,
                                                                             RegWr => RegWR,
@@ -42,19 +42,20 @@ begin
                                                                             Rn => Ra,
                                                                             Rd => Rd_multi,
                                                                             Rm => Rm_multi
-                                                                          );
+                                                                            );
                                                                           
-  entity PSR_0 : entity work.PSR port map ( DATAIN => flag,
-                                            RST => rst_PSR, 
-                                            CLK => clk, 
-                                            WE => PSREn,
-                                            DATAOUT => flag_sortie_PSR;
-                                          );
+  PSR_0 : entity work.PSR port map ( DATAIN => flag,
+                                      RST => rst_PSR, 
+                                      CLK => clk, 
+                                      WE => PSREn,
+                                      DATAOUT => flag_sortie_PSR
+                                      );
                                           
-  entity multiplexeur_0 : entity work.multiplexeur_2 port map(A => Rm_multi,
-                                                              B => Rd_multi,
-                                                              COM => Reg_sel,
-                                                              S => Rb
-                                                            );
+  multiplexeur_0 : entity work.multiplexeur_2 generic map (N => 4)
+                                              port map    (A => Rm_multi,
+                                                           B => Rd_multi,
+                                                           COM => RegSel,
+                                                           S => Rb
+                                                           );
   
 end architecture;
