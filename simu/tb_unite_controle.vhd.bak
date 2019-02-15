@@ -9,27 +9,33 @@ Architecture test_bench of tb_unite_controle is
 
   signal instruction  : std_logic_vector (31 downto 0);
   signal flag         : std_logic_vector (31 downto 0);    
+  signal Clk          : std_logic;
+  signal rst_PSR      : std_logic;
+    
+  signal nPCsel       : std_logic;
+  signal RegWr        : std_logic;
+  signal ALUSrc       : std_logic;
+  signal MemWr        : std_logic;
+  signal WrSrc        : std_logic;
+  signal ALUCtr       : std_logic_vector (1 downto 0);
   
-  signal nPCsel      : std_logic;
-  signal RegWr       : std_logic;
-  signal ALUSrc      : std_logic;
-  signal PSREn       : std_logic;
-  signal MemWr       : std_logic;
-  signal ALUCtr      : std_logic_vector(1 downto 0));
-
-
+  signal Ra           : std_logic_vector (3 downto 0);
+  signal Rw           : std_logic_vector (3 downto 0);
+  signal Rb           : std_logic_vector (3 downto 0)); 
+ 
 begin
 
   unite_controle : entity work.unite_controle(RTL) port map (instruction => instruction, 
                                                              flag        => flag,
+                                                             Clk         => Clk,
+                                                             rst_PSR     => rst_PSR,                                                             
                                                              nPCsel      => nPCsel,
                                                              RegWr       => RegWr,
                                                              ALUSrc      => ALUSrc,
-                                                             PSREn       => PSREn,
                                                              MemWr       => MemWr,
                                                              WrSrc       => WrSrc,
-                                                             RegSel      => RegSel,
-                                                             ALUCtr      => ALUCtr);
+                                                             ALUCtr      => ALUCtr,
+                                                             Ra          => Ra,
     
                                                                      
   clock: process begin  
