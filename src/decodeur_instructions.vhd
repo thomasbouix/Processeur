@@ -15,7 +15,11 @@ port(
   MemWr       : out std_logic;
   WrSrc       : out std_logic;
   RegSel      : out std_logic;
-  ALUCtr      : out std_logic_vector(1 downto 0));
+  ALUCtr      : out std_logic_vector (1 downto 0);
+  
+  Rn          : out std_logic_vector (3 downto 0);
+  Rd          : out std_logic_vector (3 downto 0);
+  Rm          : out std_logic_vector (3 downto 0)); 
   
 end entity decodeur_instructions;
 
@@ -58,9 +62,11 @@ begin
   end process decodage;
   
   
-  generation: process (instruction_courante, flag) begin    -- question des dependances ??
+  generation: process (instruction_courante, flag, instruction) begin    -- question des dependances ??
   
-    if    (instruction_courante = MOV) then           -- MOV
+    if    (instruction_courante = MOV) then           -- MOV     
+      Rd     <= instruction(15 downto 12);
+      
       nPCsel <= '0';
       RegWr  <= '1';
       ALUSrc <= '1';
@@ -70,7 +76,10 @@ begin
       WrSrc  <= '0';
       RegSel <= '0';
          
-    elsif (instruction_courante = LDR) then           -- LDR
+    elsif (instruction_courante = LDR) then           -- LDR      
+      Rn     <= instruction(19 downto 16);
+      Rd     <= instruction(15 downto 12);
+      
       nPCsel <= '0';
       RegWr  <= '1';
       ALUSrc <= '1';
@@ -81,6 +90,9 @@ begin
       RegSel <= '0';
       
     elsif (instruction_courante = ADDi) then          -- ADDi
+      Rn     <= instruction(19 downto 16);
+      Rd     <= instruction(15 downto 12);
+     
       nPCsel <= '0';
       RegWr  <= '1';
       ALUSrc <= '1';
@@ -91,6 +103,10 @@ begin
       RegSel <= '0';
       
     elsif (instruction_courante = ADDr) then          -- ADDr 
+      Rn     <= instruction (19 downto 16);
+      Rd     <= instruction (15 downto 12);
+      Rm     <= instruction (3 downto 0);
+      
       nPCsel <= '0';
       RegWr  <= '1';
       ALUSrc <= '0';
@@ -101,6 +117,8 @@ begin
       RegSel <= '0';
       
     elsif (instruction_courante = CMP) then           -- CMP
+      Rn     <= instruction (19 downto 16);
+      
       nPCsel <= '0';
       RegWr  <= '0';
       ALUSrc <= '1';
@@ -111,7 +129,7 @@ begin
       RegSel <= '0';
       
     elsif (instruction_courante = BLT) then           -- BLT      
-      if (flag = X"00000001") then  -- condition respectee
+      if (flag = X"00000001") then  -- condition respectee   
         nPCsel <= '1';
         RegWr  <= '0';
         ALUSrc <= '-';   
@@ -132,6 +150,9 @@ begin
       end if;    
       
     elsif (instruction_courante = STR) then           -- STR
+      Rn     <= instruction (19 downto 16);
+      Rd     <= instruction (15 downto 12);
+      
       nPCsel <= '0';
       RegWr  <= '0';
       ALUSrc <= '1';
@@ -141,7 +162,7 @@ begin
       WrSrc  <= '-';
       RegSel <= '1';      
       
-    elsif (instruction_courante = BAL) then           -- BAL
+    elsif (instruction_courante = BAL) then           -- BAL            
       nPCsel <= '1';
       RegWr  <= '0';
       ALUSrc <= '-';
