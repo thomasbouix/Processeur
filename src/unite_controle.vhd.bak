@@ -9,7 +9,6 @@ entity unite_controle is port(
   nPCsel      : out std_logic;
   RegWr       : out std_logic;
   ALUSrc      : out std_logic;
-  PSREn       : out std_logic;
   MemWr       : out std_logic;
   WrSrc       : out std_logic;
   ALUCtr      : out std_logic_vector (1 downto 0);
@@ -22,13 +21,14 @@ end unite_controle;
 
 architecture RLT of unite_controle is
   
-  signal RegSel             : std_logic;
-  signal Rd_multi, Rm_multi : std_logic_vector(3 downto_0);
+  signal RegSel, PSREn      : std_logic;
+  signal Rd_multi, Rm_multi : std_logic_vector(3 downto 0);
+  signal flag_sortie_PSR    : std_logic_vector(31 downto 0);
   
 begin
   
   entity decodeur_instruction_0 : entity work.decodeur_instruction port map(instruction => instruction,
-                                                                            flag => flag,
+                                                                            flag => flag_sortie_PSR,
                                                                             nPCsel => nPCsel,
                                                                             RegWr => RegWR,
                                                                             ALUSrc => ALUSrc,
@@ -42,10 +42,10 @@ begin
                                                                             Rm => Rm_multi
                                                                           );
                                                                           
-  entity PSR_0 : entity work.PSR port map ( DATAIN,
-                                            RST, 
+  entity PSR_0 : entity work.PSR port map ( DATAIN => flag,
+                                            RST => , 
                                             CLK, 
-                                            WE,
+                                            WE => PSREn,
                                             DATAOUT
                                           );
                                           

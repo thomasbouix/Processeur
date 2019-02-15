@@ -5,6 +5,8 @@ use ieee.numeric_std.all;
 entity unite_controle is port(
   instruction : in std_logic_vector(31 downto 0);
   flag        : in std_logic_vector(31 downto 0);
+  clk         : in std_logic;
+  rst_PSR     : in std_logic;
   
   nPCsel      : out std_logic;
   RegWr       : out std_logic;
@@ -43,10 +45,10 @@ begin
                                                                           );
                                                                           
   entity PSR_0 : entity work.PSR port map ( DATAIN => flag,
-                                            RST => , 
-                                            CLK, 
+                                            RST => rst_PSR, 
+                                            CLK => clk, 
                                             WE => PSREn,
-                                            DATAOUT
+                                            DATAOUT => flag_sortie_PSR;
                                           );
                                           
   entity multiplexeur_0 : entity work.multiplexeur_2 port map(A => Rm_multi,
