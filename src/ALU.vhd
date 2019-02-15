@@ -5,10 +5,11 @@ use ieee.numeric_std.all;
 
 
 entity ALU is port(
-  A, B : in std_logic_vector(31 downto 0);
+  A  : in std_logic_vector(31 downto 0);
+  B  : in std_logic_vector(31 downto 0);
   OP : in std_logic_vector(1 downto 0);
-  S : out std_logic_vector(31 downto 0);
-  N : out std_logic
+  S  : out std_logic_vector(31 downto 0);
+  N  : out std_logic_vector(31 downto 0)  -- N sur 32 bits !
   );
 end entity ALU;
 
@@ -35,9 +36,14 @@ begin
     else
       res <= (others => '-');
     end if;
+    
+    -- affectation de N dans un process pour ne pas avoir d'affectations multiples
+    N    <= (others => '0');        -- N sur 32 bits !
+    N(0) <= res(31);                -- N sur 32 bits !
+  
   end process;
   
-  S <= std_logic_vector(res);
-  N <= res(31);
+  S    <= std_logic_vector(res);
+
   
 end architecture;

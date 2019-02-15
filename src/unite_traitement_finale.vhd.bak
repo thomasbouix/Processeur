@@ -12,7 +12,7 @@ Entity unite_traitement_finale is port(
   COM_2 : in std_logic;
   Imm : in std_logic_vector (7 downto 0);
   
-  N  : out std_logic;
+  N  : out std_logic; -- N sur 32 bits !
   S  : out std_logic_vector (31 downto 0));
   
 end entity unite_traitement_finale;
@@ -57,7 +57,7 @@ begin
                                                           S   => busW);                                                       
                                                            
   UAL           : entity work.ALU            port map (A  => busA,
-                                                       B  => busB,
+                                                       B  => mux_21_out,
                                                        OP => OP,
                                                        S  => ALU_out,
                                                        N  => N);

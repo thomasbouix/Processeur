@@ -19,7 +19,7 @@ Architecture test_bench of tb_unite_traitement_finale is
   signal Imm : std_logic_vector(7 downto 0);
   
   -- 2 signaux en sortie
-  signal N : std_logic;
+  signal N : std_logic_vector (31 downto 0);    -- N sur 32 bits !
   signal S : std_logic_vector (31 downto 0);
   
 

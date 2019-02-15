@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity PSR is port(
-  DATAIN : in std_logic_vector(31 downto 0);
+  DATAIN : in std_logic_vector(31 downto 0);    -- FLAG sur 32 bits !
   RST, CLK, WE : in std_logic;
   DATAOUT : out std_logic_vector(31 downto 0)
   );

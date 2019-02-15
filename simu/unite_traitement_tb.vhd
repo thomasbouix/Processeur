@@ -14,7 +14,7 @@ architecture test_bench of unite_traitement_tb is
   signal Clk_i, WE_i: std_logic;
   signal RW_i, RA_i, RB_i : std_logic_vector (3 downto 0);
   signal OP_i : std_logic_vector (1 downto 0);
-  signal N_i  : std_logic;
+  signal N_i  : std_logic_vector (31 downto 0); -- N sur 32 bits !
   signal S_i  : std_logic_vector (31 downto 0);
 
   begin
