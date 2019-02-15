@@ -1,0 +1,107 @@
+pwd
+# /nfs/home/sasl/eleves/ei-se/3670068/Numerique/Semestre_6/Processeur
+cd simu
+dir
+# ALU.do			     tb_extension_de_signe.vhd
+# data_memory.do		     tb_gestion_instructions.vhd
+# extension_de_signe.do	     tb_gestion_instructions.vhd.bak
+# gestion_instructions.do      tb_register_bench.vhd
+# gestion_instructions.do.bak  tb_unite_traitement_finale.vhd
+# PC_register.do		     tb_unite_traitement_finale.vhd.bak
+# PC_register.do.bak	     transcript
+# PC_register_tb.vhd	     unite_traitement.do
+# PC_register_tb.vhd.bak	     unite_traitement.do.bak
+# PSR.do			     unite_traitement_finale.do
+# PSR_tb.vhd		     unite_traitement_tb.vhd
+# PSR_tb.vhd.bak		     unite_traitement_tb.vhd.bak
+# register_bench.do	     vsim.wlf
+# tb_ALU.vhd		     wlft65b0Er
+# tb_ALU.vhd.bak		     wlftipj419
+# tb_data_memory.vhd	     work
+ls
+# ALU.do
+# data_memory.do
+# extension_de_signe.do
+# gestion_instructions.do
+# gestion_instructions.do.bak
+# PC_register.do
+# PC_register.do.bak
+# PC_register_tb.vhd
+# PC_register_tb.vhd.bak
+# PSR.do
+# PSR_tb.vhd
+# PSR_tb.vhd.bak
+# register_bench.do
+# tb_ALU.vhd
+# tb_ALU.vhd.bak
+# tb_data_memory.vhd
+# tb_extension_de_signe.vhd
+# tb_gestion_instructions.vhd
+# tb_gestion_instructions.vhd.bak
+# tb_register_bench.vhd
+# tb_unite_traitement_finale.vhd
+# tb_unite_traitement_finale.vhd.bak
+# transcript
+# unite_traitement.do
+# unite_traitement.do.bak
+# unite_traitement_finale.do
+# unite_traitement_tb.vhd
+# unite_traitement_tb.vhd.bak
+# vsim.wlf
+# wlft65b0Er
+# wlftipj419
+# work
+ls | grep .do
+# ALU.do
+# data_memory.do
+# extension_de_signe.do
+# gestion_instructions.do
+# gestion_instructions.do.bak
+# PC_register.do
+# PC_register.do.bak
+# PSR.do
+# register_bench.do
+# unite_traitement.do
+# unite_traitement.do.bak
+# unite_traitement_finale.do
+vcom -93 ../src/decodeur_instructions.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity decodeur_instructions
+# -- Compiling architecture RTL of decodeur_instructions
+ls
+# ALU.do
+# data_memory.do
+# extension_de_signe.do
+# gestion_instructions.do
+# gestion_instructions.do.bak
+# PC_register.do
+# PC_register.do.bak
+# PC_register_tb.vhd
+# PC_register_tb.vhd.bak
+# PSR.do
+# PSR_tb.vhd
+# PSR_tb.vhd.bak
+# register_bench.do
+# tb_ALU.vhd
+# tb_ALU.vhd.bak
+# tb_data_memory.vhd
+# tb_extension_de_signe.vhd
+# tb_gestion_instructions.vhd
+# tb_gestion_instructions.vhd.bak
+# tb_register_bench.vhd
+# tb_unite_traitement_finale.vhd
+# tb_unite_traitement_finale.vhd.bak
+# transcript
+# unite_traitement.do
+# unite_traitement.do.bak
+# unite_traitement_finale.do
+# unite_traitement_tb.vhd
+# unite_traitement_tb.vhd.bak
+# vsim.wlf
+# wlft65b0Er
+# wlftipj419
+# work
