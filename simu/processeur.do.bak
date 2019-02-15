@@ -30,4 +30,4 @@ add wave -radix hexadecimal -position insertpoint sim:/tb_processeur/processeur/
 add wave -radix hexadecimal -position insertpoint sim:/tb_processeur/processeur/unite_traitement_finale_0/register_bank/Banc(2)
 
 
-run 400 ns
+run 1000 ns

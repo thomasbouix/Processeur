@@ -28,6 +28,6 @@ sim:/tb_processeur/processeur/unite_controle_0/decodeur_instruction_0/Rn
 add wave -radix hexadecimal -position insertpoint sim:/tb_processeur/processeur/unite_traitement_finale_0/register_bank/Banc(0)
 add wave -radix hexadecimal -position insertpoint sim:/tb_processeur/processeur/unite_traitement_finale_0/register_bank/Banc(1)
 add wave -radix hexadecimal -position insertpoint sim:/tb_processeur/processeur/unite_traitement_finale_0/register_bank/Banc(2)
-
+add wave -radix decimal -position insertpoint sim:/tb_processeur/processeur/unite_traitement_finale_0/data_memory/Banc(42)
 
 run 1000 ns

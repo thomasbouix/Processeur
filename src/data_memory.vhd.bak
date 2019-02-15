@@ -20,7 +20,7 @@ architecture RTL of data_memory is
   
   begin
     for i in 63 downto 0 loop
-      result(i) := std_logic_vector(to_unsigned(i,32));
+      result(i) := (others => '0');
     end loop;
     return result;
   end init_banc;
