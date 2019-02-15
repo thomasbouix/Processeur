@@ -29,6 +29,8 @@ architecture RLT of unite_controle is
   
 begin
   
+  Rw <= Rd_multi;
+  
   decodeur_instruction_0 : entity work.decodeur_instructions port map(instruction => instruction,
                                                                             flag => flag_sortie_PSR,
                                                                             nPCsel => nPCsel,
@@ -41,7 +43,7 @@ begin
                                                                             ALUCtr => ALUCtr,
                                                                             Rn => Ra,
                                                                             Rd => Rd_multi,
-                                                                            Rm => Rm_multi
+                                                                            Rm => Rm_multi                                                              
                                                                             );
                                                                           
   PSR_0 : entity work.PSR port map ( DATAIN => flag,

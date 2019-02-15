@@ -117,9 +117,7 @@ begin
       RegSel <= '0';
       
     elsif (instruction_courante = CMP) then           -- CMP
-      Rn     <=;
-      Rw     <=;
-      Rm     <=;
+      Rn     <= instruction (19 downto 16);
       
       nPCsel <= '0';
       RegWr  <= '0';
@@ -131,11 +129,7 @@ begin
       RegSel <= '0';
       
     elsif (instruction_courante = BLT) then           -- BLT      
-      if (flag = X"00000001") then  -- condition respectee
-        Rn     <=;
-        Rw     <=;
-        Rm     <=;
-      
+      if (flag = X"00000001") then  -- condition respectee   
         nPCsel <= '1';
         RegWr  <= '0';
         ALUSrc <= '-';   
@@ -145,10 +139,6 @@ begin
         WrSrc  <= '-';
         RegSel <= '0';        
       else                  -- condition non respectee
-        Rn     <=;
-        Rw     <=;
-        Rm     <=;
-      
         nPCsel <= '0';
         RegWr  <= '0';
         ALUSrc <= '-';   
@@ -160,9 +150,8 @@ begin
       end if;    
       
     elsif (instruction_courante = STR) then           -- STR
-      Rn     <=;
-      Rw     <=;
-      Rm     <=;
+      Rn     <= instruction (19 downto 16);
+      Rd     <= instruction (15 downto 12);
       
       nPCsel <= '0';
       RegWr  <= '0';
@@ -173,11 +162,7 @@ begin
       WrSrc  <= '-';
       RegSel <= '1';      
       
-    elsif (instruction_courante = BAL) then           -- BAL
-      Rn     <=;
-      Rw     <=;
-      Rm     <=;
-            
+    elsif (instruction_courante = BAL) then           -- BAL            
       nPCsel <= '1';
       RegWr  <= '0';
       ALUSrc <= '-';

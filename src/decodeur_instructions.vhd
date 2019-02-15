@@ -31,7 +31,7 @@ Architecture RTL of decodeur_instructions is
     
 begin
 
-  decodage: process(instruction) begin
+  decodage: process(instruction, instruction_courante) begin
     
     if    (instruction(31 downto 20) = X"E3A") then   -- MOV 
       instruction_courante <= MOV;

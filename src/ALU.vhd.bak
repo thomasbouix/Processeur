@@ -37,8 +37,10 @@ begin
       res <= (others => '-');
     end if;
     
-    N    <= (others => '0');        -- N sur 32 bits !
-    N(0) <= res(31);                -- N sur 32 bits !
+    -- affectation de N dans un process pour ne pas avoir d'affectations multiples
+    N(31 downto 1) <= (others => '0');        -- N sur 32 bits !
+    N(0) <= res(31);                          -- N sur 32 bits !
+  
   end process;
   
   S    <= std_logic_vector(res);
