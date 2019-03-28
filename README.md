@@ -1,4 +1,4 @@
-# Processeur
+# Processeur Monocyle ARM7TDMi
 
 Pour compiler et lancer la simulation:
 
